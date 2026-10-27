@@ -1,0 +1,30 @@
+# SignalFold — Python backend dependencies
+# Install: pip install -r requirements.txt
+
+# ── Web framework ─────────────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+
+# ── Data validation ───────────────────────────────────────────────────────────
+pydantic==2.10.1
+pydantic-settings==2.6.1
+
+# ── Environment / config ──────────────────────────────────────────────────────
+python-dotenv==1.0.1
+
+# ── OpenAI-compatible client (used for Nebius Token Factory endpoint) ─────────
+openai==1.57.0
+
+# ── Tavily search ─────────────────────────────────────────────────────────────
+tavily-python==0.5.0
+
+# ── HTTP client (used for URL content fetching) ───────────────────────────────
+httpx==0.28.0
+
+# ── Web content extraction ─────────────────────────────────────────────────────
+beautifulsoup4==4.12.3
+
+# ── SQLite helper ─────────────────────────────────────────────────────────────
+# Python's built-in sqlite3 is used directly; no ORM needed at scaffold stage.
+# aiosqlite added for async support when implemented.
+aiosqlite==0.20.0

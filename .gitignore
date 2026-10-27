@@ -1,0 +1,41 @@
+# ── Secrets & environment ────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+*.so
+.mypy_cache/
+.pytest_cache/
+htmlcov/
+.coverage
+.ven/
+
+# ── Node / Frontend ──────────────────────────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/build/
+
+# ── SQLite databases ─────────────────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── OS & editor ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,130 @@
+/* ── Reset & tokens ──────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --color-bg: #0a0c14;
+  --color-surface: #13162a;
+  --color-border: #1e2340;
+  --color-accent: #6c63ff;
+  --color-accent-dim: #3d3880;
+  --color-text: #e2e4f0;
+  --color-text-muted: #7a7f9e;
+  --color-ok: #34d399;
+  --color-error: #f87171;
+  --radius: 12px;
+  --font: 'Inter', system-ui, sans-serif;
+}
+
+/* Google Fonts — Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: var(--font);
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100dvh;
+  line-height: 1.6;
+}
+
+/* ── Layout ───────────────────────────────────────────────────────────────── */
+.sf-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.sf-header {
+  padding: 3rem 1.5rem 2rem;
+  text-align: center;
+  background: linear-gradient(160deg, #141832 0%, #0a0c14 100%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sf-logo {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.sf-logo-signal { color: var(--color-accent); }
+.sf-logo-fold   { color: var(--color-text); }
+
+.sf-tagline {
+  margin-top: 0.4rem;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
+.sf-main {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+}
+
+.sf-footer {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+}
+
+.sf-footer a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* ── Card ─────────────────────────────────────────────────────────────────── */
+.sf-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  width: 100%;
+  max-width: 560px;
+}
+
+.sf-scaffold-notice h2 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+.sf-scaffold-notice p {
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+}
+
+/* ── Button ─────────────────────────────────────────────────────────────────*/
+.sf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.sf-btn:hover { background: #7c74ff; }
+.sf-btn:active { transform: scale(0.97); }
+.sf-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+
+/* ── Status ─────────────────────────────────────────────────────────────────*/
+.sf-status {
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.sf-status--ok    { background: #0d2620; color: var(--color-ok); }
+.sf-status--error { background: #2a0e0e; color: var(--color-error); }
